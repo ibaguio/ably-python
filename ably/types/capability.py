@@ -1,6 +1,10 @@
 from __future__ import absolute_import
 
-from collections import MutableMapping
+try:
+    from collections import MutableMapping
+except ImportError:
+    from collections.abc import MutableMapping
+
 import json
 import logging
 
